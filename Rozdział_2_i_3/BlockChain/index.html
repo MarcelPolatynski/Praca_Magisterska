@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Task Manager</title>
+    <script>
+        async function fetchTasks() {
+            const response = await fetch('/chain');
+            const data = await response.json();
+            const tasks = extractLatestTasks(data.chain);
+            displayTasks(tasks);
+        }
+
+        function extractLatestTasks(chain) {
+            const taskMap = new Map();
+            chain.forEach(block => {
+                block.tasks.forEach(task => {
+                    if (!task.deleted) {
+                        taskMap.set(task.id, task);
+                    } else {
+                        taskMap.delete(task.id);
+                    }
+                });
+            });
+            return Array.from(taskMap.values());
+        }
+
+        function displayTasks(tasks) {
+            const taskList = document.getElementById('task-list');
+            taskList.innerHTML = '';
+            tasks.forEach(task => {
+                const taskItem = document.createElement('li');
+                taskItem.textContent = `ID: ${task.id}, Tytuł: ${task.title}, Opis: ${task.description}, Status: ${task.completed}`;
+                taskList.appendChild(taskItem);
+
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Edytuj';
+                editButton.onclick = () => editTask(task.id, task.title, task.description);
+                taskItem.appendChild(editButton);
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Usuń';
+                deleteButton.onclick = () => deleteTask(task.id);
+                taskItem.appendChild(deleteButton);
+
+                const statusButton = document.createElement('button');
+                statusButton.textContent = task.completed ? 'Zmień status' : 'Zmień status';
+                statusButton.onclick = () => updateTaskStatus(task.id, !task.completed);
+                taskItem.appendChild(statusButton);
+            });
+        }
+
+        async function addTask() {
+            const title = document.getElementById('task-title').value;
+            const description = document.getElementById('task-description').value;
+            const response = await fetch('/tasks', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ title, description })
+            });
+            if (response.ok) {
+                await fetch('/mine');
+                fetchTasks();
+            }
+        }
+
+        async function editTask(taskId, currentTitle, currentDescription) {
+            const title = prompt('Podaj nowy tytuł', currentTitle);
+            const description = prompt('Podaj nowy opis', currentDescription);
+            const response = await fetch(`/tasks/${taskId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ title, description })
+            });
+            if (response.ok) {
+                await fetch('/mine');
+                fetchTasks();
+            }
+        }
+
+        async function deleteTask(taskId) {
+            const response = await fetch(`/tasks/${taskId}`, {
+                method: 'DELETE'
+            });
+            if (response.ok) {
+                await fetch('/mine');
+                fetchTasks();
+            }
+        }
+
+        async function updateTaskStatus(taskId, completed) {
+            const response = await fetch(`/tasks/${taskId}/status`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ completed })
+            });
+            if (response.ok) {
+                await fetch('/mine');
+                fetchTasks();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchTasks();
+        });
+    </script>
+</head>
+<body>
+    <h1>Blockchain Zarządzanie zadaniami</h1>
+    <input type="text" id="task-title" placeholder="Tytuł zadania">
+    <input type="text" id="task-description" placeholder="Opis zadania">
+    <button onclick="addTask()">Dodaj zadanie</button>
+    <ul id="task-list"></ul>
+</body>
+</html>

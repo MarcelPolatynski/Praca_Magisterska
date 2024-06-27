@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain strona prawdziwa</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Blockchain Strona Prawdziwa</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            if (window.ethereum) {
+                window.web3 = new Web3(window.ethereum);
+                await window.ethereum.enable();
+            } else {
+                console.error('Web3 not found! Please install MetaMask.');
+                return;
+            }
+
+            const abi = [
+                {
+                    "inputs": [],
+                    "name": "register",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "_username",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "_password",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "login",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function"
+                }
+            ];
+
+            const contractAddress = 'YOUR_CONTRACT_ADDRESS'; // Replace with your contract address
+            const contract = new web3.eth.Contract(abi, contractAddress);
+
+            const loginForm = document.getElementById('loginForm');
+            const message = document.getElementById('message');
+
+            loginForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const username = loginForm.username.value;
+                const password = loginForm.password.value;
+
+                try {
+                    const loggedIn = await contract.methods.login(username, password).call();
+                    if (loggedIn) {
+                        message.textContent = 'Login successful.';
+                    } else {
+                        message.textContent = 'Invalid username or password.';
+                    }
+                } catch (error) {
+                    console.error(error);
+                    message.textContent = 'Error occurred. Please try again.';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

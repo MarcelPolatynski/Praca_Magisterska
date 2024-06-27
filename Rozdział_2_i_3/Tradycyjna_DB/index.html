@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarządzanie zadaniami tradycyjna baza danych</title>
+    <script>
+        async function fetchTasks() {
+            const response = await fetch('/tasks');
+            const tasks = await response.json();
+            const taskList = document.getElementById('task-list');
+            taskList.innerHTML = '';
+            tasks.forEach(task => {
+                const taskItem = document.createElement('li');
+                taskItem.innerHTML = `<strong>Tytuł:</strong> ${task.title}, <strong>Opis:</strong> ${task.content}, <strong>Status:</strong> ${task.completed ? 'Zrobione' : 'Do zrobienia'}`;
+
+                const updateButton = document.createElement('button');
+                updateButton.textContent = 'Edytuj';
+                updateButton.onclick = () => {
+                    const newTitle = prompt('Podaj nowy tytuł:', task.title);
+                    const newContent = prompt('Podaj nowy opis:', task.content);
+                    if (newTitle && newContent) {
+                        updateTask(task.id, newTitle, newContent);
+                    }
+                };
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Usuń';
+                deleteButton.onclick = () => deleteTask(task.id);
+
+                const toggleButton = document.createElement('button');
+                toggleButton.textContent = task.completed ? 'Zmień status' : 'Zmień status';
+                toggleButton.onclick = () => toggleCompleted(task.id, !task.completed);
+
+                taskItem.appendChild(updateButton);
+                taskItem.appendChild(deleteButton);
+                taskItem.appendChild(toggleButton);
+
+                taskList.appendChild(taskItem);
+            });
+        }
+
+        async function addTask() {
+            const title = document.getElementById('task-title').value;
+            const content = document.getElementById('task-content').value;
+            if (title && content) {
+                await fetch('/tasks', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ title, content }),
+                });
+                fetchTasks();
+            }
+        }
+
+        async function toggleCompleted(taskId, completed) {
+            await fetch(`/tasks/${taskId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ completed }),
+            });
+            fetchTasks();
+        }
+
+        async function deleteTask(taskId) {
+            await fetch(`/tasks/${taskId}`, {
+                method: 'DELETE',
+            });
+            fetchTasks();
+        }
+
+        async function updateTask(taskId, newTitle, newContent) {
+            await fetch(`/tasks/${taskId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ title: newTitle, content: newContent }),
+            });
+            fetchTasks();
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchTasks);
+    </script>
+</head>
+<body>
+    <h1>Zarządzanie zadaniami tradycyjna baza danych</h1>
+    <input type="text" id="task-title" placeholder="Tytuł">
+    <input type="text" id="task-content" placeholder="Opis">
+    <button onclick="addTask()">Dodaj</button>
+    <ul id="task-list"></ul>
+</body>
+</html>

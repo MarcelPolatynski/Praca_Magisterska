@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99995316-cfc8-4ca2-8788-94c8c7289c09" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Pytanie_1/Test_Wydajności/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Pytanie_1/Tradycyjna_DB/.idea/Tradycyjna_DB.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Pytanie_5/Blockchain_Files_Real_Use/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Pytanie_5/Blockchain_Pliki/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Pytanie_5/SQLite_DB/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Rozdział_4/Blockchain/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Rozdział_4/Blockchain/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Rozdział_4/Blockchain/phising.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Rozdział_4/Tradycyjna_DB/phising.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Rozdział_4/Tradycyjna_DB/phising.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Rozdział_4/Tradycyjna_DB/server.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Rozdział_4/Tradycyjna_DB/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_1/BlockChain/.idea/BlockChain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Pytanie_1/BlockChain/.idea/BlockChain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_1/BlockChain/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Pytanie_1/BlockChain/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_1/BlockChain/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Pytanie_1/BlockChain/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_1/Pytanie 1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_1/Tradycyjna_DB/.idea/Pytanie_1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_1/Tradycyjna_DB/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Pytanie_1/Tradycyjna_DB/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_1/Tradycyjna_DB/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Pytanie_1/Tradycyjna_DB/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_1/Tradycyjna_DB/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/.idea/BlockChain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/.idea/BlockChain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/Database/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/Database/.idea/DataBase.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/Database/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/Database/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/Database/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/Database/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/Database/atack51.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/BlockChain/Database/blockchain.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/DataBase/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/DataBase/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/DataBase/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/DataBase/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/DataBase/.idea/pythonProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/DataBase/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/DataBase/database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/DataBase/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/DataBase/users.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/SQL Injector atack/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/SQL Injector atack/.idea/SQL Injector atack.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/SQL Injector atack/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/SQL Injector atack/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/SQL Injector atack/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/SQL Injector atack/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Pytanie_2/Tradycyjna_DB/SQL Injector atack/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BlockChain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BlockChain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Porównanie Wydajności.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tradycyjna_DB/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tradycyjna_DB/.idea/Tradycyjna_DB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tradycyjna_DB/.idea/Tradycyjna_DB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tradycyjna_DB/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tradycyjna_DB/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tradycyjna_DB/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tradycyjna_DB/server.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2geNUZCQ5VAXdiBREzD9EJ2KOnP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.atack51.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.blockchain.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/A/Magisterka/PracaMagisterskaBlockchain/Pytania/Pytanie_3/BlockChain&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99995316-cfc8-4ca2-8788-94c8c7289c09" name="Changes" comment="" />
+      <created>1716054100782</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716054100782</updated>
+    </task>
+    <servers />
+  </component>
+</project>
